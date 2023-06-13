@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="html, js, css" />
+    <meta name="description" content="simple quizz app with js" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Simple Quizz</title>
+  </head>
+  <body>
+    <button id="startBtn">Start</button>
+
+    <div class="panel">
+      You answered <span id="correctly"></span> of
+      <span id="totalPanel"></span> questions correctly.
+    </div>
+
+    <div class="container">
+      <div class="indicator-wrapper">
+        <span id="questionNo"></span>
+        <span>/</span>
+        <span id="totalIndicator"></span>
+      </div>
+      <div class="question-wrapper">
+        <p>Question</p>
+      </div>
+
+      <div class="choices-wrapper"></div>
+
+      <button id="nextBtn">Next</button>
+    </div>
+
+    <script src="./Script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,157 @@
+:root {
+  --black: #000;
+  --white: #fff;
+  --red: #ff1100;
+  --green: #84ff76;
+  --font: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--black);
+  font-family: var(--font);
+}
+
+#startBtn {
+  position: absolute;
+  top: 45%;
+  left: 35%;
+  width: 540px;
+  height: 72px;
+  background-color: var(--red);
+  color: var(--white);
+  font-size: 28px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+#startBtn:active {
+  transform: scale(0.9);
+}
+
+.panel {
+  display: none;
+  position: absolute;
+  top: 58%;
+  left: 35%;
+  color: var(--white);
+  width: 540px;
+  padding: 0.4rem;
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 20px;
+}
+
+.panel #correctly,
+.panel #totalPanel {
+  color: var(--red);
+  font-weight: bold;
+}
+
+.container {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 540px;
+  display: none;
+}
+
+.container .indicator-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 27rem;
+}
+
+.indicator-wrapper span {
+  color: var(--white);
+  font-weight: bold;
+}
+
+.container .question-wrapper {
+  width: 100%;
+  background-color: var(--white);
+  padding: 0.4rem;
+  text-align: left;
+  margin-bottom: 0.8rem;
+}
+
+.question-wrapper p {
+  color: var(--black);
+  font-size: 18px;
+}
+
+.container .choices-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.choices-wrapper button {
+  width: 100%;
+  margin: 0.2rem 0;
+  padding: 0.5rem;
+  text-align: left;
+  background-color: var(--white);
+  color: var(--black);
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+button.correct {
+  background-color: var(--green);
+}
+
+button.wrong {
+  background-color: var(--red);
+}
+
+.container #nextBtn {
+  display: none;
+  position: absolute;
+  right: 0;
+  width: 96px;
+  height: 28px;
+  margin-top: 4px;
+  border: none;
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#nextBtn:hover {
+  background-color: #e8e8e8;
+}
+
+/************ RESPONSE ************/
+
+@media only screen and (max-width: 720px) {
+  #startBtn {
+    width: 50%;
+    left: 25%;
+  }
+  .panel {
+    width: 50%;
+    left: 25%;
+  }
+  .container {
+    width: 98%;
+  }
+}
